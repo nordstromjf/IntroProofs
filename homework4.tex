@@ -1,0 +1,114 @@
+\documentclass{article}
+\usepackage{amssymb}
+\pagestyle{empty}
+
+\setlength{\topmargin}{-.5in}
+\setlength{\oddsidemargin}{-.25in}
+\setlength{\textwidth}{6in}
+\setlength{\textheight}{9in}
+
+\everymath{\displaystyle}
+
+\begin{document}
+
+
+{\bf Math 220}\hfill{Name:}
+
+{\bf Homework 4: Proof by Contradiction, Proof by Contrapositive}
+\vspace{.3in}
+
+Write all proofs clearly and neatly on your own paper; ie, your proofs should contain complete sentences!!! Remember: your proofs should strive to be correct, clear, and complete.
+
+
+\begin{enumerate}
+\item  Use proof by cases for the following problems.
+
+\begin{enumerate}
+\item Prove that the product of any two consecutive integers is even.
+
+\smallskip
+
+\item Prove that the square of any integer has the form $3k$ or $3k+1$ for some integer $k$.
+
+\smallskip
+
+\item Prove that for any integer $n$, $n(n^2-1)(n+2)$ is divisible by 4.
+
+\smallskip
+
+\end{enumerate}
+
+\item Prove the following by contradiction.
+
+\begin{enumerate}
+\item There is no greatest even integer.
+
+\smallskip
+
+\item There is no least positive rational number.
+
+\smallskip
+
+\end{enumerate}
+\item Prove the following by contrapositive.
+
+\begin{enumerate}
+\item If the product of two positive real numbers is greater than 100, then at least one of the numbers is greater than 10.
+
+\smallskip
+
+\item If the sum of two real numbers is less than 50 then at least one of the numbers is less than 25.
+
+\smallskip
+
+\end{enumerate}
+
+\item Prove the following statements by either contradiction or contrapositive (be sure to note which method you used).
+\begin{enumerate}
+\item For all integers $n$, if $n^2$ is odd then $n$ is odd.
+
+\smallskip
+
+\item For all integers $n$ and all prime numbers $p$, if $n^2$ is divisible by $p$, then $n$ is divisible by $p$.
+\smallskip
+\item For all integers $a$, $b$, and $c$, if $a$ does not divide $(bc)$, then $a$ does not divide $b$.
+\smallskip
+
+\item For all integers $a$, $b$, and $c$, if $a$ divides $b$ and $a$ does not divide $c$, then $a$ does not divide $(b+c)$.
+\smallskip
+\end{enumerate}
+
+\item Determine whether the following statements are true or false. Prove the true statements by contradiction and provide counterexamples for the false ones.
+\begin{enumerate}
+\item The sum of any two irrational numbers is irrational.
+\smallskip
+\item If $a$ and $b$ are rational numbers, $b\neq 0$, and $r$ is an irrational number, then $a+br$ is irrational.
+\smallskip
+\item If $r$ is any rational number, and $s$ is any irrational number, then ${r\over s}$ is irrational.
+\smallskip
+\end{enumerate}
+
+\item If $a$, $b$, and $c$ are integers and $a^2+b^2=c^2$, must at least one of $a$ and $b$ be even? Justify your answer.
+\bigskip
+
+\item From Worksheet 1 we know that, given any statement of truth-functional logic, we can always find a logically equivalent statement that uses only ``$\neg$" and ``\&". For example, $[(p\leftrightarrow q) \vee r]$ is logically equivalent to 
+$\neg\{\neg r\ \&\ [\neg (\neg p\ \&\ \neg q)\ \&\ \neg (p\ \&\ q)]\}$. So we could, if we wanted to, do without the connectives ``$\vee$", ``$\underline \vee$", ``$\rightarrow$", and ``$\leftrightarrow$". Suppose that, instead, we chose to use {\it only} the connectives ``\&", ``$\vee$", ``$\rightarrow$", and ``$\leftrightarrow$". Would these connective suffice? Why or why not? Remember that whatever your response, you should be able to offer a {\it proof} of it!
+\medskip
+
+\item Consider the following statement and ``proof." Is the proof correct? If so, what proof strategies does it use? If not, can it be fixed? Is the theorem correct?
+
+ ``{\bf Theorem.}" There are irrational numbers $a$ and $b$ such that $a^b$ is rational.
+\smallskip
+\begin{enumerate}
+\item[] \underbar{Proof.} Either $\sqrt{2}^{\sqrt{2}}$ is rational or it is irrational.
+\smallskip
+\begin{enumerate}
+\item[]  Case 1: $\sqrt{2}^{\sqrt{2}}$ is rational. Let $a=b=\sqrt{2}$. Then $a$ and $b$ are irrational, and $a^b=\sqrt{2}^{\sqrt{2}}$, which we assumed was rational.
+\smallskip
+\item[]  Case 2: $\sqrt{2}^{\sqrt{2}}$ is irrational. Let $a=\sqrt{2}^{\sqrt{2}}$ and $b=\sqrt{2}$. Then $a$ is irrational by assumption, and we know that $b$ is also irrational. Furthermore, $a^b=\bigl(\sqrt{2}^{\sqrt{2}}\bigr)^{\sqrt{2}}=\sqrt{2}^{(\sqrt{2}\sqrt{2})}=2$. Which is rational.
+\end{enumerate}
+\end{enumerate}
+
+
+\end{enumerate}
+\end{document}
