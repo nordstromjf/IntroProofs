@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mathbook xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+
+  
+<docinfo>
+<brandlogo source="images/im-coverimage-icon.svg" />
+<macros>
+
+\newcommand{\nin}{}
+
+</macros>
+
+        <latex-preamble>
+            <package>cancel</package>
+        </latex-preamble>
+
+<latex-image-preamble>
+\usepackage{tikz}
+\usepackage{mathtools}
+\usepackage{tkz-euclide}
+\usetkzobj{all}
+%\usetikzlibrary{patterns}
+%\usetikzlibrary{positioning}
+%\usetikzlibrary{matrix,arrows}
+%\usetikzlibrary{calc}
+%\usetikzlibrary{shapes}
+%\usetikzlibrary{through,intersections,decorations,shadows,fadings}
+
+\usepackage{pgfplots}
+%\pgfplotsset{compat=1.10}
+</latex-image-preamble>
+  <analytics>
+    <statcounter>
+      <project>11625953</project>
+      <security>f68ed8d5</security>
+    </statcounter>
+  </analytics>
+</docinfo>
+
+
+
+<book>
+<title>An Introduction to Proofs</title>
+
+<xi:include href="./frontmatter.mbx" />
+
+<xi:include href="./chapter1.mbx" />
+
+<backmatter xml:id="backmatter">
+<appendix xml:id="notation">
+  <title>List of Symbols</title>
+
+  <notation-list />
+</appendix>
+
+<!--<xi:include href="./bibliography.mbx" />-->
+
+<index xml:id="index-part">
+<title>Index</title>
+<index-list />
+</index>
+
+</backmatter>
+</book>
+</mathbook>

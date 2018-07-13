@@ -1,0 +1,96 @@
+
+<section xml:id="day-1">
+  <title>Introduction</title>
+  <introduction>
+  <p>
+    In a letter to Leonhard Euler in 1742, Goldbach made a claim that is now a famous conjecture.
+  </p>
+  <assemblage><title>Goldbach's Conjecture</title>
+      <p> Every even positive integer greater than 2 can be written as a sum of two primes.</p>
+  </assemblage>
+
+  <p>For intance, 8 can be written as the sum of 3 and 5, two prime numbers, while 42,016 = 257 + 41759 (one of many pairs of primes that sum to 42,016).
+  </p>
+
+  <p>Do you believe the Goldbach conjecture is true or false?  What would convince you that it is false?  What would convince you that it is true?  How many cases would we need to check to become convinced?</p>
+
+  <p>What makes this claim so famous is that it is still unresolved.  The claim has been verified for all evens less than <m>4 \cdot 10^{17}</m> (see <url href="http://sweet.ua.pt/tos/goldbach.html">http://sweet.ua.pt/tos/goldbach.html</url>).  Is this enough to convince you?  Should mathematicians be convinced?  </p>
+
+  <p>The answer to the last question is, simply, <q>no</q>.  The conjecture remains unproven to this day.  The closest result, proved in 1966 by JR Chen, states that all sufficiently large integers are the sum of a prime and the product of at most 2 primes.</p>
+
+  <p>MORE ON WHAT PROOF IS</p>
+
+  <theorem xml:id="thm-root2"><statement><p><m>\sqrt{2}</m> is irrational.</p></statement></theorem>
+    <proof>
+      <p>Assume <m>\sqrt{2}</m> is rational.  Then <me>\sqrt{2} = \frac{p}{q}</me> where <m>p</m> and <m>q</m> are integers and have no common factors. It follows that <me> 2 = \frac{p^2}{q^2},</me> so that <m>p^2 = 2q^2</m> from which it follows that <m>p^2</m> is even.</p>
+      <p>Now <m>p</m> itself must be even since an odd times an odd is odd.  Thus, <m>p = 2k</m> for some integer <m>k</m>.  So, <me>p^2 = (2k)^2 = 4k^2.</me>  Since <m>p^2 = 2q^2</m> as well, it follows that <me>2q^2 = 4k^2,</me> or <m>q^2 = 2k^2</m>.  Thus, by similar reasoning, <m>q</m> itself is even.  But if <m>p</m> and <m>q</m> are both even, then we contradict our assumption that <m>p</m> and <m>q</m> have no common factors. 
+      Thus, <m>\sqrt{2}</m> is not rational.  </p>
+    </proof> 
+
+    <example xml:id="ex-prime-gen"><title>Prime Number Generator</title>
+    <statement>
+    <p>Goal: Find a function <m>f(n)</m> whose domain is nonnegative integers and whose range is some infinite subset of the set of all primes.</p>
+    <p>What about <m>f(n)=2n+1</m>?  Well, <m>f(1)=3</m>, which is prime, as are <m>f(2) = 5</m> and <m>f(3)=7</m>, but <m>f(4)=9</m> is not prime.</p>
+    <p>How about <m>f(n)=n^2 + n + 41</m>?  One can check (don't take our word for it!) that <m>f(n)</m> is prime for <m>n = 1, 2, \ldots, 10</m>.  In fact, <m>f(11) = 173</m> is also prime.  And now that we try it, <m>f(12)</m> is prime, as is <m>f(13)</m>, <m>f(14)</m>, and <m>f(15)</m>.  Hold on, <m>f(n)</m> is prime for <m>n \leq 40</m>!! Have we found a prime number generator?  Are you convinced?  No?  Well, <m>f(41) = </m></p>
+    </statement>
+    </example>
+</introduction>
+    <subsection><title>Validity and Soundness</title><p>I got nothin'.</p></subsection>
+
+
+<!-- DAY 1 EXERCISES  -->
+
+<exercises> <title>Exercises</title>
+<exercise>
+  <statement>
+    <p> Assume that the truth-value assignments for each statement are correct.
+      <ul>
+      <li> All Linfield math students are sleep-deprived. (True) </li>
+      <li> All sleep-deprived people are goofy. (True)</li>
+      <li> All sleep-deprived people are Linfield math students. (False) </li>
+      <li> All Linfield math students are goofy. (True) </li>
+      </ul>
+    </p>
+    <p> Now given these assigned truth-values, determine the validity and soundness of each of the following arguments:</p>
+    <p> a. All Linfield math students are sleep-deprived.  All sleep-deprived people are goofy.  Therefore all Linfield math students are goofy. </p>
+    <p> b. All Linfield math students are goofy. All sleep-deprived people are goofy. Therefore all Linfield math students are sleep-deprived.</p>
+    <p>c. All sleep-deprived people are Linfield math students. All Linfield math students are goofy. Therefore all sleep-deprived people are goofy.</p>
+    <p>d.  All sleep-deprived people are goofy.  All Linfield math students are goofy. Therefore All Linfield math students are goofy.</p>
+  </statement>
+</exercise>
+<exercise>
+  <statement>
+    <p> Assume that the truth-value assignments for the following statements are correct
+      <ul>
+       <li> All talented people are insightful. (True) </li>
+       <li> All talented people are rich. (False)  </li>
+       <li> All college students are rich. (False)  </li>
+       <li> All college students are talented. (False)  </li>
+       <li> All rich people are insightful. (False) </li>
+       <li> All college students are insightful. (False) </li>
+       <li> All rich people are college students. (False) </li>
+      </ul>
+    </p>
+    <p>In each case construct arguments with TWO premises such that:</p>
+    <p> a. The argument is valid, but both premises and the conclusion are false.</p>
+    <p> b. The argument is valid, but both premises are false, and the conclusion is true.</p>
+    <p> c. The argument is valid, one premise is true and one false, and the conclusion is true.</p>
+    <p> d. The argument is valid, one premise is true and one false, and the conclusion is false.</p>
+  </statement>
+</exercise>
+<exercise>
+  <statement>
+    <p> Indicate which of the following statements are true. Be prepared to explain why in class. For those that are false, show why they are false by giving an example. </p>
+    <p>a. Every argument with a false conclusion is invalid.</p>
+    <p>b. Every argument with a false premise is invalid.</p>
+    <p>c. Every argument with a false premise and a false conclusion is invalid.</p>
+    <p>d. Every argument with a false premise and a true conclusion is invalid.</p>
+    <p>e. Every argument with true premises and a false conclusion is invalid.</p>
+    <p>f. Every argument with a true conclusion is sound.</p>
+    <p>g. Every argument with a false conclusion is unsound.</p>
+  </statement>
+</exercise>
+</exercises>
+
+
+</section>

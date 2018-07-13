@@ -1,0 +1,326 @@
+<section xml:id="sets">
+  <title>Sets</title>
+  <introduction>
+  <p>A set consists of a collection of objects that we call elements.  We introduce the following notation.
+<ul>
+<li> <m>x \in A</m> means the element <m>x</m> is a member of the set <m>A</m>.  </li>
+
+<li> <m>x \notin A</m> means <m>x</m> is not in the set <m>A</m>.</li>
+
+<li> <m>\emptyset</m> is the empty set, the set with no elements.</li>
+
+<li> <m>A \subseteq B</m> means every element of <m>A</m> is also an element of <m>B</m>.  That is,  <m>A \subseteq B</m> means this:  If <m>x \in A</m> then <m>x \in B</m>.</li>
+
+<li> <m>A = B</m> means that <m>A \subseteq B</m> and <m>B \subseteq A</m>.</li>
+
+<li> <m>A \subset B</m> means that <m>A \subseteq B</m> and there is at least one element <m>x \in B</m> such that <m>x \notin A</m>.  </li>
+<ul>
+
+<p>Some common sets of numbers include
+<ul>
+<li> <m>\mathbb{N} = \{1, 2, 3, \ldots\}</m>, the set of natural numbers</li>
+<li> <m>\Z = \{\ldots, -2, -1, 0, 1, 2, \ldots\}</m>, the set of integers</li>
+<li> <m>\displaystyle \Q = \Big\{ \frac{a}{b} ~|~ a, b \in \Z, b \neq 0\Big\}</m>, the set of rational numbers</li>
+<li> <m>\R</m>, the set of real numbers.  This set contains all rational numbers as well as the irrational numbers.  </li>
+<li> <m>\C = \{a + bi ~|~ a, b \in \R\}</m>, the set of complex numbers.</li>
+</ul></p>
+
+<definition><statement><p>The <term>union</term><idx><h>set</h><h>union</h></idx> of two sets <m>A</m> and <m>B</m>, denoted <m>A \cup B</m>, is the set <me>A \cup B = \{x | x \in A ~{\rm
+or~} x \in B\}.</me> The <term>intersection</term><idx><h>set</h><h>intersection</h></idx>of <m>A</m> and <m>B</m>, denoted <m>A \cap B</m>,
+is the set <me>A \cap B = \{x | x \in A ~{\rm and~} x \in B\}.</me> A set
+<m>A</m> is a  <term>subset</term><idx><h>set</h><h>subset</h></idx> of <m>B</m>, denoted <m>A \subseteq B</m> if <m>x \in A</m>
+implies <m>x \in B</m>. A set <m>A</m> is a <term>proper subset</term><idx><h>set</h><h>proper subset</h></idx> of <m>B</m>, denoted <m>A \subset B</m> if <m>A \subseteq B</m> and there exists an element <m>b \in B</m> such that <m>b \notin A</m>.  Two sets <m>A</m> and <m>B</m> are <term>equal</term><idx><h>set</h><h>equal</h></idx>, denoted <m>A = B</m>, if <m>A \subseteq B</m> and <m>B \subseteq A</m>.  The <term>relative complement</term><idx><h>set</h><h>relative complement</h></idx> of <m>B</m> in <m>A</m>, denoted </m>A\setminus B</m>, is the set
+<me>A \setminus B = \{x | x \in A ~{\rm and}~ x \notin B \}.</me>
+The <term>empty set</term><idx><h>set</h><h>empty set</h></idx>, denoted <m>\emptyset</m>, is the set with no
+elements.  The empty set is a subset of every set.</p></statement>
+</definition>
+
+<p>We note that sets <m>A</m> and <m>B</m> are not equal, written <m>A \neq B</m>, if either there exists an <m>x \in A</m> such that <m>x \notin B</m> or there exists an <m>x \in B</m> such that <m>x \notin A</m>.  If <m>A \cap B \neq \emptyset</m> then we say <m>A</m> intersects <m>B</m>.  If we say <q><m>A</m> does not intersect <m>B</m></q>, or <q></m>A</m> and <m>B</m> don't intersect</q>, we mean that <m>A \cap B = \emptyset</m>.  A collection of sets is called mutually disjoint if no two sets in the collection intersect.</p>
+
+
+<example><title>Set operations</title>
+<statement>
+<p>If <m>A = \{a,b,c,d,e,f,g\}</m> and <m>B =
+\{d,f,h,m,p,r\}</m> then <me>A \cap B = \{d,f\}~~~{\rm and}~~~A \cup B =
+\{a,b,c,d,e,f,g,m,p,r\}.</me>  Note also that
+<me>A \setminus B = \{a,b,c,e,g\}~{\rm and~} B \setminus A =
+\{h,m,p,r\}.</me></p></statement>
+<example>
+
+
+<example><title>Set operations</title><statement><p>Let <m>A = [0,4]</m> and <m>B = [2,6]</m> be intervals in the real line.  Then <m>A \cap B = [2,4]</m> <m>A \cup B = [0,6]</m>, <m>A \setminus B = [0,2)</m> and <m>B - A = (4,6]</m>.</p></statement>
+<example>
+
+<theorem><title>DeMorgan's Laws</title><statement><p> Let <m>A</m> and <m>B</m> be subsets of the set <m>X</m>.  Then
+<ol><li> <m> X \setminus (A \cup B) = (X-A) \cap (X - B).</m></li>
+<li> <m> X \setminus (A \cap B) = (X-A) \cup (X - B)</m>.</li><ol> </p></statement></theorem>
+
+
+<proof>
+<p>We prove (1), leaving (2) as an exercise.  To show these sets are equal, we show that each set is a subset of the other.</p>
+
+<p>First we show <m>X \setminus (A \cup B) \subseteq (X-A) \cap (X - B).</m>  Suppose <m>x \in  X \setminus (A \cup B)</m>.  This means <m>x \in X</m> and <m>x \notin A \cup B</m>, by the definition of relative complement.  Since <m>x</m> is not in the union of <m>A \cup B</m>, it is neither in <m>A</m> nor in <m>B</m>.  That is, <m>x \notin A</m> and <m>x \notin B</m>.  Now, <m>x \in X</m> and <m>x \notin A</m> implies that <m>x \in X \setminus A</m>.  Similarly, <m>x \in X \setminus B</m>, and it follows that <m>x \in (X\setminus A) \cap (X \setminus B).</m></p>
+
+<p>Second we show <m>(X\setminus A) \cap (X \setminus B) \subseteq X \setminus (A \cup B)</m>.  Suppose <m>x \in (X\setminus A) \cap (X \setminus B).</m>  Then <m>x \in X</m> and <m>x \notin A</m> and <m>x \notin B</m>.  It follows that <m>x \notin A \cup B</m>, so <m>x \in X \setminus (A \cup B)</m>.</p>  
+</proof>
+
+
+<!-- generalized unions and intersections, not converted to mbx
+
+ <definition> Let <m>I</m> be a set, which in this context we call an indexing set.  For each <m>\alpha \in I</m>, suppose <m>A_\alpha</m> is a set.  We define the following two sets:
+<ol>
+<li> <m>\bigcup_{\alpha \in I} A_\alpha = \{ x | {\rm there~exists~some~}\alpha \in I {\rm~such~that~}x \in A_\alpha \}$
+\par 2. $\displaystyle\bigcap_{\alpha \in I} A_\alpha = \{ ~x~|~{\rm for~all~}\alpha \in I, x \in A_\alpha \}$
+
+</definition>
+
+\begin{theorem} (Generalized DeMorgan's Laws): Let $\{A_\alpha ~|~ \alpha \in I \}$ be a collection of subsets of the set $X$.  Then
+\par 1. $\displaystyle X \setminus \bigcup_{\alpha \in I} A_\alpha = \bigcap_{\alpha \in I} (X \setminus A_\alpha)$
+\par 2. $\displaystyle X \setminus \bigcap_{\alpha \in I} A_\alpha = \bigcup_{\alpha \in I} (X \setminus A_\alpha)$
+</theorem}
+-->
+
+
+<section xml:id="day-2"><title>Propositional Logic</title>
+<introduction>
+<definition><statement><p> A <term>proposition</term><idx><h>proposition</h></idx> is a sentence that has exactly one truth value: true (T) or false (F).</p></statement>
+</definition>
+
+<example><title>Some propositions</titel><statement><p>A few propositions:
+<ol>
+<li> <m>\pi \gt e</m>.  This proposition has truth value true.
+<li> <m>3 \gt 8</m>.  (F)
+<li> Earth is always closer to Mars than Jupiter.  (I suppose we could find out.)
+</ol>
+And a few sentences that are not propositions.
+<ol>
+<li> <m>x^2 > 7</m>.  The truth value depends on the choice of <m>x</m>.
+<li> <q>This sentence is false.</q>  This is a paradox: it is neither true nor false.
+</ol></p>
+
+<p>We let letters such as <m>P</m> and <m>Q</m> and <m>R</m> denote propositions.</p>
+</statement></example>
+
+<definition><statement><p>  The <term>negation</term><idx><h>proposition</h><h>negation</h></idx> of a proposition <m>P</m>, denoted <m>\neg P</m> is the proposition <q>not <<m>P</m>.</q>  <m>\neg P</m> is true if and only if <m>P</m> is false.</p>
+
+<p>The <term>conjunction</term><idx><h>proposition</h><h>conjunction</h></idx>  of <m>P</m> and <m>Q</m>, denoted <m>P \wedge  Q</m>, is the proposition <q><m>P</m> and <m>Q</m>.</q>  <m>P \wedge  Q</m> is true if and only if both <m>P</m> and <m>Q</m> are true.</p>
+
+<p>The <term>disjunction</term><idx><h>proposition</h><h>disjunction</h></idx>  of <m>P</m> and <m>Q</m>, denoted <m>P \vee Q</m>, is the proposition <q><m>P</m> or <m>Q</m>.</q>  <m>P \vee Q</m> is true if and only if at least one of <m>P</m> or <m>Q</m> is true. </p></statement>
+</definition>
+
+<definition><statement><p> A <term>propositional form</term><idx><h>propositional form</h></idx> is a string of propositions involving negations, conjunctions and disjunctions.</p>
+
+<p>A <term>truth table</term><idx><h>truth table</h></idx> is a list of truth values for a propositional form that depend on the values assigned to its components.  </p></statement>
+</definition>
+
+
+
+<example><statement>
+<p> Below is a truth table for the propositional form <m>(P \wedge Q) \vee R</m>.  There are 8 rows, because there are 8 combinations of truth values for the 3 component propositions.  In general, the truth table for a propositional form having <m>k</m> component propositions will have <m>2^k</m> rows. In this table we let <m>1</m> denote True and <m>0</m> denote False.</p>
+
+<table><caption>Truth table for the propositional form <m>(P \wedge Q) \vee R</m> </caption>
+        <tabular top="minor" left="minor" right="minor" bottom="minor" halign="center">
+          <row bottom="minor">
+            <cell><m>P</m></cell>
+            <cell><m>Q</m></cell>
+            <cell><m>R</m></cell>
+            <cell><m>P \wedge Q</m></cell>
+            <cell><m>(P \wedge Q) \vee R</m></cell>
+          </row>
+          <row>
+            <cell>0</cell>
+            <cell>0</cell>
+            <cell>0</cell>
+            <cell>0</cell>
+            <cell>0</cell>
+          </row>
+          <row>
+            <cell>0</cell>
+            <cell>0</cell>
+            <cell>1</cell>
+            <cell>0</cell>
+            <cell>1</cell>
+          </row>
+          <row>
+            <cell>0</cell>
+            <cell>1</cell>
+            <cell>0</cell>
+            <cell>0</cell>
+            <cell>0</cell>
+          </row>
+          <row>
+            <cell>0</cell>
+            <cell>1</cell>
+            <cell>1</cell>
+            <cell>0</cell>
+            <cell>1</cell>
+          </row>
+          <row>
+            <cell>1</cell>
+            <cell>0</cell>
+            <cell>0</cell>
+            <cell>0</cell>
+            <cell>0</cell>
+          </row>
+          <row>
+            <cell>1</cell>
+            <cell>0</cell>
+            <cell>1</cell>
+            <cell>0</cell>
+            <cell>1</cell>
+          </row>
+          <row>
+            <cell>1</cell>
+            <cell>1</cell>
+            <cell>0</cell>
+            <cell>1</cell>
+            <cell>1</cell>
+          </row>
+          <row>
+            <cell>1</cell>
+            <cell>1</cell>
+            <cell>1</cell>
+            <cell>1</cell>
+            <cell>1</cell>
+          </row>  
+        </tabular>
+        </table>
+        </statement>
+</example>
+
+<definition><statement><p> A <term>tautology</term><idx><h>tautology</h></idx> is a propositional form that is true for every assignment of truth values to its components.  </p>
+<p>A <term>contradiction</term><idx><h>contradiction</h></idx> is a propositional form that is false for every assignment of truth values to its components.
+Two propositional forms are <term>equivalent</term><idx><h>propositional form</h><h>equivalence of two</h></idx> if and only if they have the same truth tables. </p>
+
+<p>A <term>denial</term><idx><h>denial</h></idx> of a proposition <m>P</m> is any proposition equivalent to <m>\neg P</m>.</p></statement>
+</definition>
+
+
+<example xml:id="ex-propform"><title>Some propositional forms</title>
+<statement><p>Here are three propositions:
+<ul>
+<li><m>P</m>:  Oregon borders Canada.  
+
+<li><m>Q</m>:  In 2018 Linfield College has a Mathematics Major.
+
+<li><m>R</m>: <m>\pi \gt e</m>.</ul></p>
+
+<p>Now, for the record, <m>P</m> is false while <m>Q</m> and <m>R</m> are true.  A denial of <m>P</m>, <m>\neg P</m>, is <q>Oregon does not border Canada</q> (which is true).  The propositional form <m>P \vee (Q \wedge R)</m> may be stated  as <q>Either Oregon borders Canada, or Linfield has a math major in 2018 and <m>\pi \gt e</m>.  This propositional form is true.  While <m>P</m> is false, the conjunction <m>Q \wedge R</m> is true since both <m>Q</m> and <m>R</m> are true.  Thus, the disjunction <m>P \vee (Q \wedge R)</m> is true because at least one of its component propositional forms is true.</p></statement>
+</example>
+
+
+
+<example><title>Breaking propositional forms into components.</title>
+<statement><p>In each case, practice deconstructing the propositional form into its component propositions and describe the propositional form using connectives.</p>
+<p>1. Either the Mariners won the world series in 2015 or they didn't.</p>
+<p>2. It isn't raining but it is cold!</p>
+<p>3. I like Beethoven and my son likes Mozart and Chopin.</p>
+<p>4. This class has at least 15 students or else no more than 5 are first year students.</p>
+</statement>
+<solution>
+<p>1. Either the Mariners won the world series in 2015 or they didn't.</p>
+<ul>
+<li> Let <m>P</m> be the proposition <q>The Mariners won the world series in 2015.</q></li>
+<li> Then <m>\neq P</m> is the proposition <q>The Mariners didn't win the world series in 2015.</q></li>
+<li> So the original statement has the propositional form <m>P \vee (\neg P)</m>. </li> 
+</ul>
+<p>This propositional form is a tautology because it is always true, regardless of the truth values of its component propositions.  (For the record, <m>P</m> is false and <m>\neg P</m> is true.</p>
+<p>2. It isn't raining but it is cold!</p>
+<ul>
+<li> Let <m>P</m> be:  <q>It is not raining.</q>
+<li> Let <m>Q</m> be: <q>It is cold.</q>
+<li> The original statement has the propositional form <m>P \wedge Q</m>.  
+</ul>
+<p>Note:  The word <q>but</q> really means <q>and</q> in this case. </p> 
+<p>3. I like Beethoven and my son likes Mozart and Chopin.</p>
+<ul>
+<li> Let <m>P</m> be:  <q>I like Beethoven.</q></li>
+<li> Let <m>Q</m> be: <q>My son likes Mozart.</q></li>
+<li> Let <m>R</m> be: <q>My son likes Chopin.</q></li>
+<li> The original statement has the propositional form <m>P \wedge (Q\wedge R)</qm>.</li> 
+</ul>
+<p>4. This class has at least 15 students or else no more than 5 are first year students.</p>
+<ul>
+<li> Let <m>P</m> be:  <q>This class has at least 15 students.</q></li>
+<li> Let <m>Q</m> be: <q>This class has no more than 5 first year students.</q></li>
+<li> The original statement has the propositional form <m>P \vee Q</m>.</li>  
+</ul>
+</solution>
+</example>
+
+
+<theorem xml:id="thm-propequiv"><statement><p>Assume <m>P</m>, <m>Q</m>, and <m>R</m> are propositions. The following propositional forms are equivalent.
+<ol>
+<li> <m>P \iff \neg(\neg P)</m></li>
+<li> <m>P \vee Q \iff Q \vee P</m></li>
+<li> <m>P \wedge Q \iff Q \wedge P</m></li>
+<li> <m>P \wedge (Q \wedge R) \iff (P \wedge Q) \wedge R</m></li>
+<li> <m>P \vee (Q \vee R) \iff (P \vee Q) \vee R</m></li>
+<li> <m>P \wedge (Q \vee R) \iff (P \wedge Q) \vee (P \wedge R)</m></li>
+<li> <m>P \vee (Q \wedge R) \iff (P \vee Q) \wedge (P \vee R)</m></li>
+<li> <m>\neg(P \wedge Q) \iff \neg P~ \vee \neg Q</m></li>
+<li> <m>\neg(P \vee Q) \iff \neg P~ \wedge \neg Q</m></li>
+</ol></p></statement>
+</theorem>
+
+<proof><p> We demonstrate (6) with a truth table.</p>
+
+<table><title>A truth table demonstrating <m>P \wedge (Q \vee R) \iff (P \wedge Q) \vee (P \wedge R)</m></title> 
+<tabular>
+  <row>
+  <cell><m>P</m></cell>
+  <cell><m>Q</m></cell>
+  <cell><m>R</m></cell>
+  <cell><m>Q \vee  R</m></cell>
+  <cell><m>P \wedge (Q \vee R)</m></cell>
+  <cell><m>P \wedge Q</m></cell>
+  <cell><m>P \wedge R</m></cell>
+  <cell><m>(P \wedge Q)\vee(P \wedge R)</m></cell>
+  </row>
+  <row><cell>0</cell><cell>0</cell><cell>0</cell><cell>0 </cell><cell>0 </cell><cell>0 </cell><cell>0 </cell><cell>0</cell></row>
+  <row><cell>0</cell><cell>0</cell><cell>1</cell><cell>1 </cell><cell>0 </cell><cell>0 </cell><cell>0 </cell><cell>0 </cell></row>
+  <row><cell>0</cell><cell>1</cell><cell>0</cell><cell>1 </cell><cell>0 </cell><cell>0 </cell><cell>0 </cell><cell>0 </cell></row>
+  <row><cell>0</cell><cell>1</cell><cell>1</cell><cell>1 </cell><cell>0 </cell><cell>0 </cell><cell>0 </cell><cell>0 </cell></row>
+  <row><cell>1</cell><cell>0</cell><cell>0</cell><cell>0 </cell><cell>0 </cell><cell>0 </cell><cell>0 </cell><cell>0 </cell></row>
+  <row><cell>1</cell><cell>0</cell><cell>1</cell><cell>1 </cell><cell>1 </cell><cell>0 </cell><cell>1 </cell><cell>1 </cell></row>
+  <row><cell>1</cell><cell>1</cell><cell>0</cell><cell>1 </cell><cell>1 </cell><cell>1 </cell><cell>0 </cell><cell>1 </cell></row>
+  <row><cell>1</cell><cell>1</cell><cell>1</cell><cell>1 </cell><cell>1 </cell><cell>1 </cell><cell>1 </cell><cell>1 </cell></row>
+</tabular>
+</table>
+
+<p>Notice that column 5 is the left hand side of the equivalence in (6), and column 8 is the right hand side.  Since their truth values coincide in every row, the two propositional forms are equivalent.</p></proof>
+
+<example xml:id="ex-denial"><title>Stating a plausible denial</title>
+<statement><p>State a denial of each propositional form in Example <xref xml:id="ex-propform"></xref>.</p></statement>
+<solution>
+<p>The first propositional form looks like <m>P \vee (\neg P)</m>, and we obtain a denial by performing the negation: <m>\neg[P \vee (\neg P)]</m>.  By <xref xml:id="thm-propequiv"></xref> (9) this form is equivalent to <m>\neg P \wedge \neg (\neg P)</m> , and by <xref xml:id="thm-propequiv"></xref> (1) this is equivalent to <m>\neg P \wedge P</m>, so a negation would be: <q>The Mariners did not win the 2015 world series and they did win the 2015 world series.</q> Or, more concisely, <q>The Mariners both won and did not win the 2015 world series.</q>  (This statement is a contradiction - a statement that is never true, regardless of the truth values of its component propositions.)</p>
+<p> To find a denial we consider <m>\neg[P \wedge Q]</m>, which is equivalent by <xref xml:id="thm-propequiv"></xref> (8) to <m>\neg P \vee \neg Q</m>.  So our denial is <q>It is raining or it is not cold.</q></p>
+<p> We use <xref xml:id="thm-propequiv"></xref> twice to find a useful denial:
+  <md>
+    <mrow>\neg[P \wedge (Q\vee R)] \amp \iff \neg P \vee \neg(Q \vee R)</mrow>
+    <mrow>\amp \iff \neg P \vee (\neg Q \wedge \neg R).</mrow>
+  </md>
+which yields <q>Either I do not like Beethoven or my son likes neither Mozart nor Chopin.</q></p>
+<p> A useful denial has the form <m>\neg (P \vee Q) \iff \neg P \wedge \neg Q</m>, by <xref xml:id="thm-propequiv"></xref> (9), which translates to <q>This class has fewer than 15 students and  more than 5 first year students.</q></p>
+</solution>
+</example>
+
+<definition><statement><p>Suppose <m>P</m> and <m>Q</m> are propositions.  The <term>conditional statement</term><idx><h>conditional statement</h></idx><idx><h>if...then...statement</h></idx> <m>P \Rightarrow Q</m> is the proposition <q>If <m>P</m> then <m>Q</m>,</q> which may also be stated as <q><m>P</m> implies <m>Q</m>.</q>  In this conditional statement, <m>P</m> is called the <term>antecedent</term><idx><h>antecedent</h></idx>, and <m>Q</m> is called the <term>consequent</term><idx><h>consequent</h></idx>.  The proposition <m>P \Rightarrow Q</m> is true if and only if <m>P</m> is false or <m>Q</m> is true. </p></statement> </definition>
+
+<table>
+<title>The truth table for <m>P \Rightarrow Q</m></title>
+<tabular>
+<row><cell><m>P</m></cell><cell><m>Q</m></cell><cell><m>P \Rightarrow Q</m></cell></row>
+<row><cell><m>0</m></cell><cell><m>0</m></cell><cell><m>1</m></cell></row>
+<row><cell><m>0</m></cell><cell><m>1</m></cell><cell><m>1</m></cell></row>
+<row><cell><m>1</m></cell><cell><m>0</m></cell><cell><m>0</m></cell></row>
+<row><cell><m>1</m></cell><cell><m>1</m></cell><cell><m>1</m></cell></row>
+</tabular>
+</table>
+<p>Note: The ONLY way for <m>P \Rightarrow Q</m> to be false is if <m>P</m> is true and  <m>Q</m> is false.  This means, for instance, that the conditional statement <q>If <m>8 \lt 4</m> then 16 is a prime number</q> is true.  The antecedent  <m>P</m> in this case is <q><m>8 \lt 4</m></q> and the consequent  <m>Q</m> is <q>16 is a prime number.</q>  Since  <m>P</m> is false, the conditional statement <m>P \Rightarrow Q</m> is true, regardless of the truth value of <m>Q</m>.  
+
+<definition><statement><p> Suppose <m>P</m> and <m>Q</m> are propositions.  The <term>converse</term><idx><h>converse</h></idx> of <m>P \Rightarrow Q</m> is <m>Q \Rightarrow P</m>.</p>
+<p>The <term>contrapositive</term><idx><h>contrapositive</h></idx> of <m>P \Rightarrow Q</m> is <m>\neg Q \Rightarrow \neg P</m>.  </p></statement>
+</definition>
+
+</section>
