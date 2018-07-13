@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<frontmatter xml:id="frontmatter" xmlns:xi="http://www.w3.org/2001/XInclude">
+<titlepage>
+  <author>
+                    <personname>Michael P. Hitchman</personname>
+                    <department>Mathematics Department</department>
+                    <institution>
+                        <line>Linfield College</line>
+                        <line>McMinnville, Oregon, USA</line>
+                    </institution>
+                    <!--<email>mhitchm@linfield.edu</email>-->
+                </author>
+                  <author>
+                    <personname>Jennifer Nordstrom</personname>
+                    <department>Mathematics Department</department>
+                    <institution>
+                        <line>Linfield College</line>
+                        <line>McMinnville, Oregon, USA</line>
+                    </institution>
+                </author>
+               <date>September, 2018</date>
+
+</titlepage>
+
+<colophon xml:id="colophon">
+  
+    <website>
+    <name><c>mphitchman.com</c></name>
+    <address>http://mphitchman.com</address>
+    </website>
+
+    <copyright>
+      <year>2018</year>
+      <!--<shortlicense><p>You may download and print these files for personal use.  All other rights are reserved.</p></shortlicense>-->
+      <shortlicense><p><image width="10%" source="images/ccbysa.png" /></p> <p>This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit <url href="http://creativecommons.org/licenses/by-sa/4.0/">http://creativecommons.org/licenses/by-sa/4.0/</url></p></shortlicense>
+      <holder>Michael P. Hitchman and Jennifer Nordstrom</holder>
+    </copyright>
+
+
+</colophon>
+
+
+
+<preface xml:id="preface">
+
+  <p><em>An Introduction to Proofs</em> aims to do all the right things...
+  </p>
+  <p>This text has developed from course notes for an intensive, four-week course at Linfield College...</p>
+  <paragraphs><title>For the Student</title></paragraphs>
+  <p>Welcome!  In these pages we pursue the study of mathematical reasoning.  This small text grew out of a course at Linfield College whose purpose is to serve as a bridge from the calculation based lower level math courses to the advanced mathematics courses for students interested in mathematics.  We believe that these notes will help you, the student, to develop habits of thought as well as specific proof techniques that will be useful in these advanced courses.  You will hone your proof skills with content common to many courses: set theory, basic number theory, relations, and functions.    In three or so weeks, as you begin to prepare for the final exam (yes, it comes quickly!), you will want to ask yourself the following questions:</p>
+<p>Can I <m>\ldots</m>
+<ul>
+  <li> negate propositional forms? </li>
+  <li> negate statements with quantifiers?</li>
+  <li> write out the truth table for a propositional form?</li>
+  <li> prove an existence statement is true?  false?</li>
+  <li> prove a universal statement is true? false?</li>
+  <li> prove <m>P \Rightarrow Q</m> directly?  [What do you assume, what must you prove?]</li>
+  <li> prove <m>P \Rightarrow Q</m> by contraposition?  [What do you assume, what must you prove?]</li>
+  <li> prove <m>P \Rightarrow Q</m> by contradiction?  [What do you assume, what must you prove?]</li>
+  <li> prove <m>A \subseteq B</m>? [What is the strategy?]</li>
+  <li> prove <m>A = B</m>? </li>
+  <li> determine the union and/or intersection of a family of sets?</li>
+  <li> determine the power set of a given set?</li>
+  <li> prove by induction a statement true for all natural numbers <m>n \geq a</m> for some fixed <m>a</m>?</li>
+  <li> prove by strong induction a statement true for all natural numbers <m>n \geq a</m> for some fixed <m>a</m>?</li>
+  <li> draw the directed graph associated to a relation on a small set <m>A</m>?</li>
+  <li> determine the composition and/or inverse of a relation?</li>
+  <li> determine whether a relation on <m>A</m> is reflexive? symmetric? transitive?</li>
+  <li> determine the equivalence class of an element <m>x \in A</m> determined by an equivalence relation on <m>A</m>?</li>
+  <li> describe the partition of set <m>A</m> created by an equivalence relation on <m>A</m>?</li>
+  <li> prove a function <m>f:A \to B</m> is 1-1? [What do you assume, what must you prove?]</li>
+  <li> prove a function <m>f:A \to B</m> is onto? [What do you assume, what must you prove?]</li>
+  <li> prove a function <m>f:A \to B</m> is not 1-1? not onto?</li>
+  <li> determine the image <m>f(D)</m> of a set <m>D \subseteq A</m>, where <m>f: A \to B</m>?</li>
+  <li> determine the pre-image <m>f^{-1}(E)</m> of a set <m>E \subseteq B</m>, where <m>f: A \to B</m>?</li>
+  <li> prove two sets are equivalent?</li>
+  <li> prove a set is denumerable?</li>
+  <li> prove a set is uncountable (perhaps by proving it has cardinality <m><boldtype>c</boldtype></m>)?</li>
+  <li> state definitions precisely?</li>
+  <li> sleep well for the two nights prior to the final?</li>
+</ul>
+</p>
+
+<p>You must be engaged with the content in order to understand it.  Perhaps you will scratch your head, pull your hair, bite your pencil, brainstorm with peers, write down what you know, write down what you need to prove, try various paths that lead from the given to the goal, turn away from many dead ends, revisit the precise statement of a definition, revisit your initial assumptions (are you assuming more than you should?), revisit examples worked out in class, close your workbook in frustration, go for a walk, go for a run, play ping-pong, take a shower, let your subconscious work on the problem, hear ideas from peers, visit during office hours, ask questions in class, stick around after class to ask questions.  Grapple with the material.  Keep an open mind.  This is how mathematics is done.  </p>
+
+<p>These notes aim to help you develop confidence to prove mathematical statements on your own, to foster an ability to create proofs independently, to earn the reward of the <q>ah-ha moment</q> and the satisfaction of a well-crafted argument that communicates a rigorous proof.</p>
+
+<p>You will be asked to prove statements that have already been proven.  We are not proving <em>new</em> results in this class.  We are practicing the craft of proving statements. The biggest challenge to you will be arriving at the ah-ha moment, where you suddenly see the route to the proof.  To some extent, reading other proofs, already figured out and polished onto the page, can help you develop this craft, and you will be shown several proofs.  From these examples you can see good writing style and proof techniques in action, get a sense of the degree of rigor to include in your proofs, and you may see tricks and methods that can be applied to the proofs of other statements.  But seeing other solutions can only do so much.  The craft of proof will develop much faster for you if you struggle on your own to arrive at these ah-ha moments.  Resist reading solutions to assigned work before you have figured it out.  That does no good in the long run.  To repeat: in each of you, these notes aim to foster independence of thought and a solid foundation in the craft of proof. </p>
+
+</preface>
+<acknowledgement xml:id="acknowledgment">
+  <p>
+    Many people helped with the development of this text. 
+  </p>
+</acknowledgement>
+<dedication xml:id="dedication">
+  <p>To wooly bear caterpillars everywhere</p>
+</dedication>
+</frontmatter>

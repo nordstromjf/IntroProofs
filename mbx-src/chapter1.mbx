@@ -1,0 +1,11 @@
+
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" >
+  <title>Mathematical Arguments</title>
+  <introduction>
+  	<blockquote><p>Don't ever tell me the odds.</p><attribution>Han Solo</attribution></blockquote>
+     
+  </introduction>
+  <xi:include  href="day01.mbx" />
+  <xi:include  href="day02.mbx" />
+ <!-- <xi:include  href="section1-3.mbx" />-->
+</chapter>
